@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "b7e2409e-d300-452c-a6b5-a19f0ff82f8c",
+		"name": "sprintBoot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3027178"
+	},
+	"item": [
+		{
+			"name": "list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/client",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findRut",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/client/:rut",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client",
+						":rut"
+					],
+					"variable": [
+						{
+							"key": "rut",
+							"value": "8242200-5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rut\": \"8242200-5\",\r\n    \"name\": \"prueb\",\r\n    \"email\": \"prueba@gmail.com\",\r\n    \"amount1\": 1.00,\r\n    \"amount2\": 1.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/client",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
