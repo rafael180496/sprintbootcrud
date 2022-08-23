@@ -19,4 +19,5 @@ public class Client {
     private String email;
     private Double amount1;
     private Double amount2;
+    private Boolean assessment;
 }

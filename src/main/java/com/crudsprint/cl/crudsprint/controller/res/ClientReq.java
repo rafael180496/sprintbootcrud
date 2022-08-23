@@ -1,5 +1,7 @@
 package com.crudsprint.cl.crudsprint.controller.res;
 
+import java.util.Random;
+
 import com.crudsprint.cl.crudsprint.entity.Client;
 
 public class ClientReq {
@@ -10,7 +12,8 @@ public class ClientReq {
     private Double amount2;
 
     public Client toClient() {
-        return new Client(rut, name, email, amount1, amount2);
+        Random rd = new Random();
+        return new Client(rut, name, email, amount1, amount2, rd.nextBoolean());
     }
 
     public Double getAmount1() {
