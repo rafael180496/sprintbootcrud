@@ -16,5 +16,14 @@ spec:
         - name: springboot-kubernetes
           image: springboot-kubernetes:1.0
           imagePullPolicy: IfNotPresent
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:postgresql://192.168.5.129:5432/mydb"
+            - name : SPRING_DATASOURCE_USERNAME
+              value: "postgres"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "ABC1234"
+            - name : SPRING_JPA_HIBERNATE_DDL_AUTO
+              value: "create"
           ports:
             - containerPort: 8080
